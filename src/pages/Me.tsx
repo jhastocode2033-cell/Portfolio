@@ -31,7 +31,7 @@ const PROJECTS: { title: string; description: string; tech: string[]; repo?: str
   {
     title: 'Food Recipe Website',
     description: 'Just focused on UI/UX aspect didnt really touch functionalities',
-    tech: ['React', 'TypeScript', 'Tailwind CSS', 'REST API'],
+    tech: ['React', 'TypeScript', 'Tailwind CSS'],
     repo: 'https://github.com/jhastocode2033-cell/Food_Recipe',
     
   },
