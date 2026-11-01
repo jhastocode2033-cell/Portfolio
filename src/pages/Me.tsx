@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ArrowRight, ExternalLink, LayoutTemplate, Mail, Menu, Plug, Smartphone, X } from 'lucide-react'
+import { ArrowRight, ExternalLink, Mail, Menu, X } from 'lucide-react'
 import joel from "../assets/Joel.jpg"
 
 const NAME = 'Joel'
