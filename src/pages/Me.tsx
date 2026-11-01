@@ -19,7 +19,7 @@ const PROJECTS: { title: string; description: string; tech: string[]; repo?: str
     description:
       'A coffee discovery website featuring a clean browsing experience and API integration for hot and iced coffee content.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'REST API'],
-    repo: 'https://github.com/jhastocode2033-cell/Coffee-des',
+    repo: 'https://coffee-des-umber.vercel.app/',
   },
   {
     title: 'JoMart',
