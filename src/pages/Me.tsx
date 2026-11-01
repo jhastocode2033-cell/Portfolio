@@ -33,7 +33,7 @@ const PROJECTS: { title: string; description: string; tech: string[]; repo?: str
     description:
       'A recipe website interface designed around clear content presentation, intuitive navigation, and a polished user experience.',
     tech: ['React', 'TypeScript', 'Tailwind CSS'],
-    repo: 'https://github.com/jhastocode2033-cell/Food_Recipe',
+    repo: 'https://food-recipe-henna-eta.vercel.app/',
   },
 ]
 
