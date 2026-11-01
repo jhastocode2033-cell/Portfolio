@@ -231,11 +231,11 @@ export default function Me() {
                 <div className="mt-auto flex flex-wrap gap-2 pt-6">
                   {p.repo ? (
                     <a href={p.repo} target="_blank" rel="noopener noreferrer" className={`${secondary} !px-3.5 !py-2`}>
-                      <GithubIcon /> Code
+                      <GithubIcon /> Live Demo
                     </a>
                   ) : (
                     <span className={`${btn} cursor-default border border-white/10 !px-3.5 !py-2 text-neutral-500`}>
-                      <GithubIcon /> Repository coming soon
+                      <GithubIcon /> Live Demo
                     </span>
                   )}
 
