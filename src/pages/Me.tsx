@@ -22,11 +22,11 @@ const PROJECTS: { title: string; description: string; tech: string[]; repo?: str
     repo: 'https://coffee-des-umber.vercel.app/',
   },
   {
-    title: 'JoMart',
+    title: 'AduwoMotors',
     description:
-      'A shopping application that lets users search for products and view product information retrieved from an external API.',
-    tech: ['JavaScript', 'Axios', 'REST API', 'CSS'],
-    repo: 'https://github.com/jhastocode2033-cell/JoMart',
+      'An automobile website that just displays available cars and directs customers to make contact with the company...fully frontend no backend',
+    tech: ['TypeScript',  'CSS'],
+    repo: 'https://aduwomotors-liard.vercel.app/',
   },
   {
     title: 'Food Recipe Website',
