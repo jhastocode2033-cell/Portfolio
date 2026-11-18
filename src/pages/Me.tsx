@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import type { ReactNode } from 'react'
 import { ArrowRight, ExternalLink, Mail, Menu, X } from 'lucide-react'
-import joel from "../assets/Joel.jpg"
+import joel from '../assets/Joel.jpg'
 
 const NAME = 'Joel'
 const EMAIL = 'jhastocode2033@gmail.com'
@@ -20,16 +21,15 @@ const PROJECTS: { title: string; description: string; tech: string[]; repo?: str
       'A coffee discovery website featuring a clean browsing experience and API integration for hot and iced coffee content.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'REST API'],
     repo: 'https://github.com/jhastocode2033-cell/Coffee-des',
-    live: 'https://coffee-4ygscqjv1-joel-hermanos.vercel.app/'
+    live: 'https://coffee-4ygscqjv1-joel-hermanos.vercel.app/',
   },
   {
     title: 'AduwoMotors',
     description:
-      'An automobile website that just displays available cars and directs customers to make contact with the company...fully frontend no backend',
-    tech: ['TypeScript',  'CSS'],
+      'An automobile website that displays available cars and directs customers to contact the company. Fully frontend, no backend.',
+    tech: ['TypeScript', 'CSS'],
     repo: 'https://github.com/jhastocode2033-cell/AduwoMotors',
-    live:'https://aduwomotors-liard.vercel.app/', 
-      
+    live: 'https://aduwomotors-liard.vercel.app/',
   },
   {
     title: 'Food Recipe Website',
@@ -37,7 +37,7 @@ const PROJECTS: { title: string; description: string; tech: string[]; repo?: str
       'A recipe website interface designed around clear content presentation, intuitive navigation, and a polished user experience.',
     tech: ['React', 'TypeScript', 'Tailwind CSS'],
     repo: 'https://github.com/jhastocode2033-cell/Food_Recipe',
-    live: 'https://food-recipe-henna-eta.vercel.app/'
+    live: 'https://food-recipe-henna-eta.vercel.app/',
   },
 ]
 
@@ -52,7 +52,17 @@ const primary = `${btn} bg-indigo-400 text-neutral-950 hover:bg-white`
 const secondary = `${btn} border border-white/15 text-white hover:border-white/40 hover:bg-white/5`
 const card = 'rounded-xl border border-white/10 bg-neutral-900/60 p-6 transition-colors hover:border-white/20'
 
-function Section({ id, eyebrow, title, children }: { id: string; eyebrow: string; title: string; children: React.ReactNode }) {
+function Section({
+  id,
+  eyebrow,
+  title,
+  children,
+}: {
+  id: string
+  eyebrow: string
+  title: string
+  children: ReactNode
+}) {
   return (
     <section id={id} className="scroll-mt-20 py-20">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -127,8 +137,6 @@ export default function Me() {
         <section id="home" className="scroll-mt-20 pt-16">
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-16 sm:px-8 sm:pt-24 lg:grid-cols-[1.15fr_1fr]">
             <div>
-
-
               <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
                 Hi, I’m {NAME}.
               </h1>
@@ -150,8 +158,6 @@ export default function Me() {
                   <Mail className="h-4 w-4" /> Contact Me
                 </a>
               </div>
-
-
             </div>
 
             <div className="w-full max-w-md justify-self-center lg:justify-self-end">
@@ -215,7 +221,10 @@ export default function Me() {
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {PROJECTS.map((p) => (
               <article key={p.title} className={`${card} flex flex-col`}>
-                <div className="mb-5 grid aspect-[16/10] grid-cols-4 gap-2 rounded-lg border border-white/10 bg-neutral-950 p-3" aria-hidden="true">
+                <div
+                  className="mb-5 grid aspect-[16/10] grid-cols-4 gap-2 rounded-lg border border-white/10 bg-neutral-950 p-3"
+                  aria-hidden="true"
+                >
                   {Array.from({ length: 8 }, (_, i) => (
                     <div key={i} className={`rounded ${i % 3 === 0 ? 'bg-indigo-400/25' : 'bg-white/10'}`} />
                   ))}
@@ -232,36 +241,33 @@ export default function Me() {
                   ))}
                 </ul>
 
+                <div className="mt-auto flex flex-wrap gap-2 pt-6">
+                  {p.repo && (
+                    <a
+                      href={p.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${secondary} !px-3.5 !py-2`}
+                    >
+                      <GithubIcon /> GitHub
+                    </a>
+                  )}
 
-<div className="mt-auto flex flex-wrap gap-2 pt-6">
-
-  {p.github && !p.github.startsWith('PASTE_') && (
-    <a
-      href={p.github}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`${secondary} !px-3.5 !py-2`}
-    >
-      <GithubIcon /> GitHub
-    </a>
-  )}
-
-  {p.live && (
-    <a
-      href={p.live}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`${primary} !px-3.5 !py-2`}
-    >
-      <ExternalLink className="h-4 w-4" /> Live Demo
-    </a>
-  )}
-
-</div>
-
+                  {p.live && (
+                    <a
+                      href={p.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${primary} !px-3.5 !py-2`}
+                    >
+                      <ExternalLink className="h-4 w-4" /> Live Demo
+                    </a>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
         </Section>
-
-
 
         <section id="contact" className="scroll-mt-20 py-20">
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
