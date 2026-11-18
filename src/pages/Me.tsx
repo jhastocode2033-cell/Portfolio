@@ -19,21 +19,25 @@ const PROJECTS: { title: string; description: string; tech: string[]; repo?: str
     description:
       'A coffee discovery website featuring a clean browsing experience and API integration for hot and iced coffee content.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'REST API'],
-    repo: 'https://coffee-des-umber.vercel.app/',
+    repo: 'https://github.com/jhastocode2033-cell/Coffee-des',
+    live: 'https://coffee-4ygscqjv1-joel-hermanos.vercel.app/'
   },
   {
     title: 'AduwoMotors',
     description:
       'An automobile website that just displays available cars and directs customers to make contact with the company...fully frontend no backend',
     tech: ['TypeScript',  'CSS'],
-    repo: 'https://aduwomotors-liard.vercel.app/',
+    repo: 'https://github.com/jhastocode2033-cell/AduwoMotors',
+    live:'https://aduwomotors-liard.vercel.app/', 
+      
   },
   {
     title: 'Food Recipe Website',
     description:
       'A recipe website interface designed around clear content presentation, intuitive navigation, and a polished user experience.',
     tech: ['React', 'TypeScript', 'Tailwind CSS'],
-    repo: 'https://food-recipe-henna-eta.vercel.app/',
+    repo: 'https://github.com/jhastocode2033-cell/Food_Recipe',
+    live: 'https://food-recipe-henna-eta.vercel.app/'
   },
 ]
 
@@ -228,26 +232,33 @@ export default function Me() {
                   ))}
                 </ul>
 
-                <div className="mt-auto flex flex-wrap gap-2 pt-6">
-                  {p.repo ? (
-                    <a href={p.repo} target="_blank" rel="noopener noreferrer" className={`${secondary} !px-3.5 !py-2`}>
-                      <GithubIcon /> Live Demo
-                    </a>
-                  ) : (
-                    <span className={`${btn} cursor-default border border-white/10 !px-3.5 !py-2 text-neutral-500`}>
-                      <GithubIcon /> Live Demo
-                    </span>
-                  )}
 
-                  {p.live && (
-                    <a href={p.live} target="_blank" rel="noopener noreferrer" className={`${primary} !px-3.5 !py-2`}>
-                      <ExternalLink className="h-4 w-4" /> Live demo
-                    </a>
-                  )}
-                </div>
-              </article>
-            ))}
-          </div>
+<div className="mt-auto flex flex-wrap gap-2 pt-6">
+
+  {p.github && !p.github.startsWith('PASTE_') && (
+    <a
+      href={p.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${secondary} !px-3.5 !py-2`}
+    >
+      <GithubIcon /> GitHub
+    </a>
+  )}
+
+  {p.live && (
+    <a
+      href={p.live}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${primary} !px-3.5 !py-2`}
+    >
+      <ExternalLink className="h-4 w-4" /> Live Demo
+    </a>
+  )}
+
+</div>
+
         </Section>
 
 
